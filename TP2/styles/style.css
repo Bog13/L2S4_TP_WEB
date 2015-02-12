@@ -1,0 +1,630 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* MY WORK BELOW  :) */
+
+
+
+body
+{
+    background-image: url(../images/fond.jpg);
+    background-repeat:repeat;
+}
+
+main
+{
+    position: absolute; /* pour eviter casser les autres positionnement absolue lors des redimensionnements*/
+    width:1030px;
+    left: 50%;
+    margin-left: -515px; /* 1030 / 2 */
+}
+
+header
+{
+    width:1030px;
+    height:135px;
+    background-image: url(../images/tete.png);
+    background-repeat:no-repeat;
+}
+
+
+#logo
+{
+    float: left;
+    display:inline-block;
+    position:relative;
+    top:0px;/*WTF*/
+
+    width:321px;
+    height:50px;;
+}
+
+#logo img
+{
+    position:relative;
+    left: 39px; /*calc((321px - 242px) / 2); ne passe pas au validator css ! */
+}
+
+.onglet
+{
+    float: left;
+    display:inline-block;
+    width:158px;
+    height:31px;
+    top: 5px;
+    position:relative;
+    background-image: url(../images/onglet_off.png);
+    background-repeat:no-repeat;
+
+    text-align: center;
+    padding-top:5px;
+
+ 
+}
+
+a .onglet
+{
+    font-family: Verdana;
+    font-size: 16px;
+    color: #757575;
+    text-decoration: none;
+    transition-duration: 500ms;
+}
+
+a .onglet:hover
+{
+    color: #ff9b37;
+    transition-duration: 500ms;
+}
+
+#agenda
+{
+    background-image: url(../images/onglet_on.png);
+    background-repeat:no-repeat;
+}
+
+#recherche
+{
+}
+
+#abonnement
+{
+}
+
+#parametres
+{
+}
+
+#deconnexion
+{
+    width:22px;/*WTF*/
+    height:36px;
+    left:22px;
+    background-image: url(../images/deconnexion.png);
+    background-repeat:no-repeat;
+}
+
+section
+{
+    width:1030px;
+    height:500px;
+    background-image: url(../images/contenu.png);
+}
+
+footer
+{
+    width:1030px;
+    height:156px;
+    background-image: url(../images/pied.png);
+    background-repeat:no-repeat;
+}
+
+aside
+{
+    display:inline-block;
+    position: relative;
+    float: left;
+
+    width:250px;
+    height:100%;
+    height: 100%;
+
+    margin-left:10px;
+
+    text-align: center;
+}
+
+
+table
+{
+    margin:auto;
+    margin-top: 10px;
+}
+
+
+
+th
+{
+    font-weight: bold;
+}
+
+/*Partie supérieur du calendrier qui est dans le bloc aside*/
+#cal_up
+{
+    display:inline-block;
+    position: relative;
+    float: left;
+    
+    width: 235px;
+    height: 235px;
+
+    margin:auto;
+    
+    border: 2px solid #9ac5e7;
+
+    background-color: white;
+}
+
+td
+{
+
+    /*BORDURE QUI BUG !!! */
+    /*border: black 1px solid;*/
+    position:relative;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.not_on_month
+{
+    color: #999999;
+}
+
+
+#today
+{
+    background-color: #FF5555;
+
+}
+
+a:hover 
+{
+    background-color:purple;
+}
+
+td a
+{
+    padding-top:1px;
+    color:black;
+    display:inline-block;
+    width:100%;
+    height:100%;  
+}
+
+td a:hover
+{
+    color:black;
+    background-color: #5555FF;
+}
+
+
+
+tbody tr
+{
+    transition-duration: 1s;
+}
+
+tbody tr:hover
+{
+    background-color :#9ac5e7;
+    transition-duration: 1s;
+}
+
+
+a
+{
+    text-decoration:none;
+}
+
+
+
+
+
+.fleche_gauche
+{
+    float:left;
+}
+
+.fleche_droite
+{
+    float:right;
+}
+
+
+/*CAL_DOWN = partie inférieur du calendrier (Vos agendas)*/
+
+#cal_down
+{
+    display:inline-block;
+    position: relative;
+    float: left;
+
+    width: 235px;
+    height: 130px;
+
+    margin:auto;
+    margin-top: 20px;
+
+    border: solid #9ac5e7 2px;
+
+    background-color: white;
+}
+
+#cal_down h1
+{
+    font-size: 13px;
+    text-align:center;
+
+    background-color: #9ac5e7;
+
+    font-weight: bold;
+    width: 94%; /*wtf*/
+
+    margin:auto;
+    margin-top: 2px;
+
+    padding: 5px;
+}
+
+#cal_down h2
+{
+    color: #9ac5e7;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:50%;
+}
+
+.square
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    position:relative;
+    left:20px;/*WTF*/
+
+    clear:both;
+    float: left;
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    background-color:red;
+}
+
+.square p
+{
+    position: relative;
+    left: 100%;
+    bottom: 25%;
+    display: inline-block;
+    width: 90px;/*WTF*/
+
+}
+
+
+#square_blue
+{
+    background-color: blue;   
+    border: solid 2px #0000DD;
+}
+
+#square_green
+{
+    background-color: green;   
+    border: solid 2px #00DD00;
+}
+
+#square_red
+{
+    background-color: red;   
+    border: solid 2px #DD0000;
+}
+
+
+/*SEMAINIER*/
+article
+{
+    display:inline-block;
+    width:72%;;
+    height:500px;/*WTF*/
+    text-align: center;
+}
+
+article h1
+{
+    display:inline-block;
+    margin:auto;
+}
+
+
+#semainier
+{
+    
+    display:inline-block;
+    float:left;
+
+    width: 686px; /*WTF*/
+    height: 90%;
+
+
+    padding: 0px 0px 0px 0px;
+    margin-left: 0px;
+    
+}
+
+
+#semainier_header
+{
+    display: inline-block;
+    width: 100%;
+    height: 5%;
+
+    background-color: #5555FF;
+
+}
+
+.semainier_days
+{
+    display: inline-block;
+    float:left;
+
+
+
+    width: 15%; /* 1/6 du total ~ 15%*/
+    height: 100%;
+
+    margin-left:10px;
+}
+
+.semainier_column
+{
+    float:left;
+    display: inline-block;
+    margin:auto;
+
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #5555FF;    
+
+    width: 112px;
+    height: 450px ;
+}
+
+#semainier_column_left
+{
+    border-left: 2px solid #5555FF;
+}
+
+.semainier_case
+{
+    display: inline-block;
+    float:left;
+
+    width:112px;
+    height:40px;;
+
+    border-bottom: 1px dashed #5555FF;
+
+}
+
+
+.semainier_case_bottom:hover
+{
+    background-color: rgba(4,139,154,0.1);
+}
+
+
+.semainier_case:hover
+{
+    background-color: rgba(4,139,154,0.1);
+
+}
+
+.semainier_case_bottom
+{
+
+    display: inline-block;
+    float:left;
+
+    width:112px;
+    height:40px;;
+
+    border-bottom: 1px dashed #5555FF;
+
+    border-bottom: 0px;
+}
+
+
+
+#semainier_hours_column
+{
+    float:left;
+    clear:both;
+    display: inline-block;
+
+    margin-top:2%;/*pour aligner les horaires*/
+
+    width: 30px;
+    height:96%;/*WTF*/
+
+}
+
+.semainier_hour
+{
+    float: left;
+    text-align: center;
+    font-size: 9px;
+    padding-top:5%;
+    width:100%;
+    height:40px;
+}
+
+.semainier_rdv
+{
+    float: left;
+    display: inline-block;
+    position:absolute;
+
+    font-size: 11px;
+    text-align: left;
+    
+    
+    width: 106px;
+    height: 116px;/* 4 * 40 - 4*/
+    
+    
+}
+
+#semainier_rdv_green
+{
+    top: 280px;
+    left: 293px;/*positionnement absolue oblige*/
+
+    background-color: #00FF00;
+    border: solid 2px #00DD00;
+    color: black;
+}
+
+#semainier_rdv_red
+{
+    top: 510px;
+    left: 293px;
+
+    background-color: #FF0000;
+    border: solid 2px #DD0000;
+    color: white;
+}
+
+#semainier_rdv_blue
+{
+    top: 450px;
+    left: 407px; 
+
+    background-color: #0000FF;
+    border: solid 2px #0000DD;
+    color: white;
+}
+
+/*Footer*/
+
+footer a
+{
+    float:left;
+    display:inline-block;
+    position: absolute;
+
+    color:black;
+
+    font-size: 15px;
+    padding-left: 0px;
+    transition-duration: 500ms;
+}
+
+footer a:hover
+{
+    padding-left: 5px;;
+    transition-duration: 500ms;
+    background-color: transparent;
+}
+
+footer a img
+{
+    position: relative;
+    margin-right: 4px;
+
+    float: left;
+}
+
+
+#a_propos
+{
+    top: 690px;
+    left: 200px;
+}
+
+
+
+#confidentialite
+{
+    top: 708px;
+    left: 355px;
+}
+
+
+
+#conditions
+{
+    top: 738px;
+    left: 623px;
+}
+
+
+#copyright
+{
+    top:700px;
+    left: 805px;
+}

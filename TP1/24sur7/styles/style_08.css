@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+{
+	display: block;
+}
+
+body
+{
+    line-height: 1.4px;
+}
+
+ol, ul
+{
+	list-style: none;
+}
+
+blockquote, q
+{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,q:before, q:after
+{
+	content: '';
+	content: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*MY WORK*/
+
+body
+{
+    font-family: Verdana,Arial,Sans-serif;
+    line-height: 1.4;
+    background-color: #9ac5e7;
+    background-image: url(../images/fond.jpg);
+    background-repeat: repeat;
+}
+
+
+main
+{
+    width:768;
+    background-color: #EFF6FF;
+
+    border-right: 2px solid #8ABCFD;
+    border-left:  2px solid #8ABCFD;
+
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+h1,h2,h3
+{
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+
+h1
+{
+    font-size: 21px;
+}
+
+
+h2
+{
+   font-size: 18px;
+    border-bottom: 2px solid #FF9B37;
+}
+
+h3
+{
+    font-size: 15px;
+    padding-left: 1em;
+}
+
+p
+{
+    padding: 1em 2em 1em 2em;
+}
+
+strong
+{
+    font-weight:bold;
+}
+
+a
+{
+    font-weight:bold;
+    text-decoration:none;
+    color: #FF9B37;
+}
+
+.lien_externe
+{
+    margin-left:2px;
+}
+
+a:hover
+{
+    text-decoration:underline;
+    
+}
+
+
+ul
+{
+    margin: 0em 0em 1em 5em;
+    list-style-image: url(../images/puce.png);
+}
+
+#ul_menu
+{
+    margin: 0em 0em 0em 2em;
+}
+
+ul ul  
+{
+    
+    margin-left: 3em;
+}
+
+ul ul li
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    
+}
+
+
+#images_centre
+{
+    width: 410px;
+    height: 250px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+
+    position:relative;
+}
+
+.images
+{
+    display: inline-block;
+    position:absolute;
+    
+}
+
+#agenda
+{
+    top: -20px;
+    down: 0px;
+    left: 150px;
+    right: 0px;   
+
+}
+
+#calendrier
+{
+    top: 40px;
+    down: 0px;
+    left: 270px;
+    right: 0px;   
+}
+
+#reseau
+{
+    top: 0px;
+    down: 0px;
+    left: 0px;
+    right: 0px;   
+}
+
+#lecteur
+{
+    top: 95px;
+    down: 0px;
+    left: 150px;
+    right: 0px;   
+}
