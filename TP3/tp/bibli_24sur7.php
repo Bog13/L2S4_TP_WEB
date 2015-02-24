@@ -8,24 +8,38 @@ define('APP_PAGE_RECHERCHE',2);
 define('APP_PAGE_ABONNEMENTS',3);
 define('APP_PAGE_PARAMETRES',4);
 
+/**
+ * Génère l'entête de la page
+ *
+ * @author  bog
+ * @param 	string 	$title 	titre de la fenetre
+ * @param 	string 	$css	chemin vers la feuille de style 
+ */
 function bog_html_head($title='default', $css='default')
 {
-	echo 
-        "<!doctype html>",
-		"<head>",
 
-		"<meta  charset=\"UTF-8\">",
-		"<link rel='stylesheet' href=\"".$css."\" type='text/css' />",
-		"<title> $title </title>",
-
-		"<head>"
-		;
+    echo
+        '<!DOCTYPE HTML>',
+        '<html>',
+        '<head>',
+        '<meta charset="UTF-8">',
+        '<title>'.$title.'| Votre agenda</title>',
+        '<link rel="stylesheet" href="'.$css.'" type="text/css">',
+        '<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">',
+	'</head>';
   
 }
 
+/**
+ * Génère le bandeau de la page
+ *
+ * @author  bog
+ * @param 	integer  $page	onglet selectionné
+ */
 function bog_html_bandeau($page)
 {
-	echo  
+	echo
+        '<main id="bcPage">',
         '<header id="bcEntete">',
 		'<div id="bcLogo"></div>',
 		
@@ -76,6 +90,11 @@ function bog_html_bandeau($page)
 
 }
 
+/**
+ * Génère le pied de page
+ *
+ * @author  bog
+ */
 function bog_html_pied()
 {
 	echo 
@@ -92,6 +111,11 @@ function bog_html_pied()
 }
 
 
+/**
+ * Génère le contenu de la page
+ *
+ * @author  bog
+ */
 function bog_html_contenu()
 {
 	echo
@@ -99,7 +123,7 @@ function bog_html_contenu()
 		'<aside id="bcGauche">',
 		'<section id="calendrier">';
 
-	bog_html_calendrier();
+	bog_html_calendrier(16,'janvier',2015);
 
 	echo 
         '</section>',
@@ -116,7 +140,45 @@ function bog_html_contenu()
 		'</section>';
 }
 
+/**
+ * Convertie un mois sous forme de chaine de caractère vers un integer
+ *
+ * @author  bog
+ * @param   string 	$month 	mois à convertir en integer
+ */
+function bog_month_to_integer($month)
+{
+    if(gettype($month) != 'integer')
+        {
+            $m = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+            $i = 0;
+            
+            while( $month != $m[$i] && $i <= 12)
+                {
+                    $i++;
+                }
+            if($i <= 12 )
+                {
+                    return $i+1;
+                }
+            else
+                {
+                    return 0;
+                }
+        }
+    
+}
 
+/**
+ * Génère le calendrier
+ *
+ * @author  bog
+ * @param 	integer	$jour 	 numéro du jour sélectionné dans le calendrier. Si $jour est égal à 0, on affiche le calendrier du mois courant de l'année courante, avec le jour courant sélectionné.
+ *
+ * @param 	integer	$mois   numéro du mois du calendrier. Si $mois est égal à 0, on affiche le calendrier du mois courant de l'année courante.
+ *
+ * @param 	integer	$année	 numéro de l'année du calendrier. Si $annee est égal à 0, on affiche le calendrier du mois courant de l'année courante.
+ */
 function bog_html_calendrier($jour=0, $mois=0, $annee = 0)
 {
 
@@ -127,7 +189,7 @@ function bog_html_calendrier($jour=0, $mois=0, $annee = 0)
     }
     if(gettype($mois) != 'integer')
     {
-        $mois = 0;
+        $mois = bog_month_to_integer($mois);
     }
     if(gettype($annee) != 'integer')
     {

@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 
 include('bibli_24sur7.php'); 
 
@@ -8,4 +8,5 @@ bog_html_bandeau(APP_PAGE_AGENDA);
 bog_html_contenu();
 bog_html_pied();
 
+ob_end_flush();
 ?>

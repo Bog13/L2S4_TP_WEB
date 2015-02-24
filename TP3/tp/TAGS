@@ -1,17 +1,0 @@
-
-bibli_24sur7.php,378
-define('APP_PAGE_AGENDA'APP_PAGE_AGENDA3,7
-define('APP_PAGE_RECHERCHE'APP_PAGE_RECHERCHE4,36
-define('APP_PAGE_ABONNEMENTS'APP_PAGE_ABONNEMENTS5,68
-define('APP_PAGE_PARAMETRES'APP_PAGE_PARAMETRES6,102
-function bog_html_head(8,136
-function bog_html_bandeau(23,394
-function bog_html_pied(76,1351
-function bog_html_contenu(92,1676
-function bog_html_calendrier(107,2158
-
-bibli_24sur7.php~,0
-
-agenda.php~,0
-
-agenda.php,0
